@@ -1,13 +1,26 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package cochegit;
 
-/**
- *
- * @author raulm
- */
+
 public class Almacen {
+    private int tamañoAlmacen;
+    CocheGIT[]almacen;
+    private int cont=0;
     
+
+    public Almacen(int tamañoAlmacen)throws Exception{
+        if(tamañoAlmacen<=0){
+            throw new Exception("El almacen debe ser mayor a 0");
+        }
+        this.tamañoAlmacen = tamañoAlmacen;
+        almacen=new CocheGIT[this.tamañoAlmacen];
+    }
+    
+    public void insertarCoche(CocheGIT coche) throws Exception{
+        if(this.cont>this.tamañoAlmacen){
+            throw new Exception("No hay espacio para insertar más coches");
+        }
+        this.almacen[cont]=coche;
+        cont++;
+    }
 }
+
