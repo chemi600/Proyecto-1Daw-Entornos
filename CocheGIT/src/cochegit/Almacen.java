@@ -30,4 +30,13 @@ public class Almacen {
         }
         return puertas;
     }
+     
+     public int sumaMaletero(){
+        int maletero=0;
+        for(int i=0;i<this.almacen.length;i++){
+            if(this.almacen[i].dameMaletero()==true)
+            maletero++;
+        }
+        return maletero;
+    }
 }
