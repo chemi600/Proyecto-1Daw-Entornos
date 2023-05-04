@@ -1,20 +1,35 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
+
 package cochegit;
 
-/**
- *
- * @author raulm
- */
+
 public class CocheGIT {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+    
+   
+     private String matricula;
+    private int numeroPuertas;
+    private boolean maletero;
+    private String color;
+
+    public CocheGIT(String matricula, int numeroPuertas, boolean maletero, String color) {
+        this.matricula = matricula;
+        this.numeroPuertas = numeroPuertas;
+        this.maletero = maletero;
+        this.color = color;
+    }
+
+    public int dameNumeroPuertas() {
+        return numeroPuertas;
+    }
+
+    public boolean dameMaletero() {
+        return maletero;
+    }
+
+    public String dameColor() {
+        return color;
+    }
+        
     }
     
-}
+
